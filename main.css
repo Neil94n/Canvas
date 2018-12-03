@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #444;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    height: 89vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    background: #ffc1cc75;
+}
+
+canvas {
+    background: #fff;
+    cursor: none;
+    /* invalid */
+    cursor: url("./img/Pen.png"), pointer;
+}
+
+#button .icon {
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
+    color: #807d7d;
+    transition: transform .3s;
+}
+
+#button {
+    display: flex;
+    padding: 10px;
+}
+
+#pen {
+    margin-right: 10px;
+}
+
+#pen.active {
+    transform: scale(1.2);
+}
+
+#eraser.active {
+    transform: scale(1.5);
+    color: #121f1f
+}
+
+
+.divide {
+    width: 1px;
+    margin: 0 7px;
+    height: 46px;
+    background: #fbf9f9;
+}
+
+
+.control {
+    padding: 5px 6px;
+}
+
+.control.active {
+    background: #ffc1cc70;
+    box-shadow: 0 0 0px 1px #ffc0c0;
+
+}
+
+.control input {
+    width: 50px;
+    border: 1px solid #a9a5a5;
+    vertical-align: text-top;
+    height: 18px;
+    text-indent: 10px;
+}
+
+.simpleIcon {
+    width: 2em;
+    height: 2em;
+    color: #777;
+}
+
+.clearfix {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#colorBox {
+    position: absolute;
+    left: 0;
+    background: #fff;
+}
+
+#colorBox .color {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    margin: 6px;
+    box-shadow: 0 0 0px 1px #969494;
+    cursor: pointer;
+    display: block;
+}
+
+.quickConfig {
+    position: absolute;
+    right: 5px;
+    box-shadow: 0 0 1px 0 #f34765;
+    padding: 5px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#quickLineConfig {
+    margin-top: 5px;
+}
+
+#quickLineConfig div:not(:last-child) {
+    width: 50px;
+    cursor: pointer;
+    padding: 6px 2px;
+    position: relative;
+}
+
+#quickLineConfig div:not(:last-child).active {
+    box-shadow: 0 0 1px 1px #ff8499
+}
+
+#quickLineConfig div:not(:last-child)::after {
+    content: "";
+    display: block;
+    background-color: #635e5e;
+    width: 100%;
+}
+
+#quickLineConfig .thin::after {
+    height: 1px;
+}
+
+#quickLineConfig .middle::after {
+    height: 3px;
+}
+
+#quickLineConfig .thick::after {
+    height: 7px;
+}
+
+#quickEraserConfig {
+    margin-top: 87px;
+    width: 54px;
+}
+
+#quickEraserConfig div:not(:last-child) {
+    cursor: pointer;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quickEraserConfig div:not(:last-child).active {
+    box-shadow: 0 0 1px 1px #ff8499;
+}
+
+#quickEraserConfig div:not(:last-child)::after{
+    content: "";
+    display: inline-block;
+    background-color: #635e5e;
+}
+
+#quickEraserConfig .thin::after{
+    width: 5px;
+    height: 5px;
+}
+
+#quickEraserConfig .middle::after {
+    width: 10px;
+    height: 10px;
+}
+
+#quickEraserConfig .thick::after {
+    width: 15px;
+    height: 15px;
+}
+
+
+
+
+
+
+
+
+
+#newPen,
+#newEraser {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    color: red;
+}
